@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caçador de Estrelas: O Legado</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Start Screen -->
+        <div id="start-screen" class="screen active">
+            <h1>Escolha seu <span>Personagem</span></h1>
+            <div class="character-selection">
+                <div class="char-card" data-char="jaspion">
+                    <div class="char-icon jaspion"></div>
+                    <h3>Jaspion</h3>
+                </div>
+                <div class="char-card" data-char="macgaren">
+                    <div class="char-icon macgaren"></div>
+                    <h3>MacGaren</h3>
+                </div>
+                <div class="char-card" data-char="kilza">
+                    <div class="char-icon kilza"></div>
+                    <h3>Bruxa Kilza</h3>
+                </div>
+                <div class="char-card" data-char="satagoss">
+                    <div class="char-icon satagoss"></div>
+                    <h3>Satã Goss</h3>
+                </div>
+            </div>
+            <button id="start-btn" class="btn" disabled>Iniciar Jogo</button>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="game-screen" class="screen">
+            <div class="hud">
+                <div class="stat">Tempo: <span id="time-left">30</span>s</div>
+                <div class="stat">Pontos: <span id="score">0</span></div>
+            </div>
+            <canvas id="game-canvas"></canvas>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="game-over-screen" class="screen">
+            <h2 id="game-over-title">Tempo Esgotado!</h2>
+            <div class="final-score">Pontuação Final: <span id="final-score-val">0</span></div>
+            <button id="restart-btn" class="btn">Jogar Novamente</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
